@@ -14,9 +14,7 @@ def check(colore, valore, id):
 
 
 def step(riga):
-  riga = riga.replace('Game ', '').replace(', ',
-                                           ',').replace('; ', ';').replace(
-                                               ': ', ':').replace(' ', '%')
+  riga = riga.replace('Game ', '').replace(', ',',').replace('; ', ';').replace(': ', ':').replace(' ', '%')
 
   id_val = getid(riga)
   rpl = id_val + ':'
@@ -73,7 +71,7 @@ print('')
 print('')
 print('')
 
-with open('a.txt', 'r') as file:
+with open('2023/2/a.txt', 'r') as file:
   riga = file.readline()
   estrazione_counter = 1  # Contatore per numerare le estrazioni
   while riga:
