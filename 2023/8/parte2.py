@@ -1,3 +1,5 @@
+import time
+import math
 matrice = {}
 array_attuale = []
 
@@ -25,17 +27,23 @@ with open("2023/8/a.txt", "r") as file:
 
         #for i in matrice:
             #print(matrice[i])
-
-    pippo = True
-    x = 0
+    print(array_attuale)
+    time.sleep(5)
+    
+    
+    r = []
     print("start while")
-    while pippo:
-        print(f"while: {x}")
-        for i in range(len(array_attuale)):
+    for i in range(len(array_attuale)):
+        x = 0
+        pippo = True
+        while pippo:
+            print(f"while: {x}")    
             print(f"\t\t\t\tfor: {i}")
             array_attuale[i] = pluto(array_attuale[i], istruzioni[x % len(istruzioni)])
-            if  (array_attuale[i].endswith("Z")):
+            x+=1
+            if (array_attuale[i].endswith("Z")):
                 pippo = False
-        x+=1
-    print("end while")
-    print(x)
+                r.append(x)           
+    print(r)
+
+
